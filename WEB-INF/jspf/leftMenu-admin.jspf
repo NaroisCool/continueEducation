@@ -1,0 +1,73 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri="/struts-tags" prefix="s" %>
+<s:set name="atype" value="login.loginTypeName" /> 
+<!-- left menu starts -->
+<div class="span2 main-menu-span">
+    <div class="well nav-collapse sidebar-nav">
+        <ul class="nav nav-tabs nav-stacked main-menu">
+
+            <s:if test="#atype == '系统管理员' || #atype == '驾校账户'">  
+                <li m="1" class="nav-header hidden-tablet"><i class="icon-menu7"></i><span class="hidden-tablet"> 学员报名</span></li>
+                <li c="1" class=""><a class="ajax-link" href="admin-users-add"><i class="icon-item"></i><span class="hidden-tablet"> 学员报名登记</span></a></li>
+                <li c="1"  class=""><a class="ajax-link" href="admin-users"><i class="icon-item"></i><span class="hidden-tablet"> 学员信息管理</span></a></li>
+                <li c="1"  class=""><a class="ajax-link" href="admin-users-reserve"><i class="icon-item"></i><span class="hidden-tablet"> 授课管理</span></a></li>
+
+                <li m="2" class="nav-header hidden-tablet"><i class="icon-menu1"></i><span class="hidden-tablet"> 培训机构</span></li>           
+                        <s:set name="agencyList" value="allAgency" /> 
+                        <s:iterator id="agency" value="#agencyList"> 
+                    <li c="2"  class="hidden"><a class="ajax-link" href="admin-agency-view?id=${agency.id}" agency="${agency.id}"><i class="icon-item"></i><span class="hidden-tablet"> ${agency.name}</span></a></li>
+                            </s:iterator> 
+                        </s:if>
+
+            <s:if test="#atype == '运管账户'">  
+                <li m="1" class="nav-header hidden-tablet"><i class="icon-menu7"></i><span class="hidden-tablet"> 学员报名</span></li>
+                <li c="1"  class=""><a class="ajax-link" href="admin-users"><i class="icon-item"></i><span class="hidden-tablet"> 学员信息管理</span></a></li>
+                <li c="1"  class=""><a class="ajax-link" href="admin-users-reserve"><i class="icon-item"></i><span class="hidden-tablet"> 授课管理</span></a></li>
+                        </s:if>
+
+            <s:if test="#atype == '系统管理员'">  
+                <li c="2" class="hidden"><a class="ajax-link" href="admin-agency"><i class="icon-item"></i><span class="hidden-tablet"> 机构添加</span></a></li>
+                        </s:if>
+                        <s:if test="#atype == '系统管理员'">  
+                <li m="3" class="nav-header hidden-tablet"><i class="icon-menu3"></i><span class="hidden-tablet"> 培训资料</span></li>
+                <li c="3" class="hidden"><a class="ajax-link" href="admin-pdf-view?other=jxdg-%E6%95%99%E5%AD%A6%E5%A4%A7%E7%BA%B2"><i class="icon-item"></i><span class="hidden-tablet"> 教学大纲</span></a></li>
+                <li c="3" class="hidden"><a class="ajax-link" href="admin-study-add"><i class="icon-item"></i><span class="hidden-tablet"> 上传资料</span></a></li>
+                <li c="3" class="hidden"><a class="ajax-link" href="admin-study"><i class="icon-item"></i><span class="hidden-tablet"> 资料管理</span></a></li>
+                        </s:if>
+            <li m="4" class="nav-header hidden-tablet"><i class="icon-menu2"></i><span class="hidden-tablet"> 统计查询</span></li>
+            
+            <li c="4" class="hidden"><a class="ajax-link" href="admin-users-query-signup"><i class="icon-item"></i><span class="hidden-tablet"> 入学统计</span></a></li>
+			<li c="4" class="hidden"><a class="ajax-link" href="admin-users-query-signup2"><i class="icon-item"></i><span class="hidden-tablet"> 统计报表导出</span></a></li>
+     
+            <li c="4" class="hidden"><a class="ajax-link" href="admin-studyrecs-query"><i class="icon-item"></i><span class="hidden-tablet"> 远程网络学习记录</span></a></li>
+            <li c="4" class="hidden"><a class="ajax-link" href="admin-signuprecs-query"><i class="icon-item"></i><span class="hidden-tablet"> 现场上课签到记录</span></a></li>
+		    <li c="4" class="hidden"><a class="ajax-link" href="admin-users-query-status"><i class="icon-item"></i><span class="hidden-tablet"> 培训总完成进度查询</span></a></li>     
+            <li m="5" class="nav-header hidden-tablet"><i class="icon-menu4"></i><span class="hidden-tablet"> 证件打印</span></li>
+            <li c="5" class="hidden"><a class="ajax-link" href="admin-print"><i class="icon-item"></i><span class="hidden-tablet"> 申请表打印</span></a></li>
+            <li c="5" class="hidden"><a class="ajax-link" href="admin-print2"><i class="icon-item"></i><span class="hidden-tablet"> 合格证打印</span></a></li>
+
+            <s:if test="#atype == '系统管理员'">  
+                <li m="6" class="nav-header hidden-tablet"><i class="icon-menu5"></i><span class="hidden-tablet"> 激活码管理</span></li>
+                <li c="6" class="hidden"><a class="ajax-link" href="admin-codes"><i class="icon-item"></i><span class="hidden-tablet"> 自动生成</span></a></li>
+                <li c="6" class="hidden"><a class="ajax-link" href="admin-code-export"><i class="icon-item"></i><span class="hidden-tablet"> 导出激活码</span></a></li>
+                <li c="6" class="hidden"><a class="ajax-link" href="admin-code"><i class="icon-item"></i><span class="hidden-tablet"> 查询激活码</span></a></li>
+                <li c="6" class="hidden"><a class="ajax-link" href="admin-code-query-user"><i class="icon-item"></i><span class="hidden-tablet"> 学员激活码查询</span></a></li>
+                <li c="6" class="hidden"><a class="ajax-link" href="admin-code-query-num"><i class="icon-item"></i><span class="hidden-tablet"> 激活码数量</span></a></li>
+
+                <li m="7" class="nav-header hidden-tablet"><i class="icon-menu6"></i><span class="hidden-tablet"> 系统用户管理</span></li>
+                <li c="7" class="hidden"><a class="ajax-link" href="admin-user-agency"><i class="icon-item"></i><span class="hidden-tablet"> 驾校账户</span></a></li>     
+                <li c="7" class="hidden"><a class="ajax-link" href="admin-user-trans"><i class="icon-item"></i><span class="hidden-tablet"> 运管账户</span></a></li>
+                        </s:if>
+			
+            <s:if test="#atype == '系统管理员' || #atype == '驾校账户'"> 
+                <li m="8" class="nav-header hidden-tablet"><i class="icon-menu7"></i><span class="hidden-tablet"> 上课管理</span></li>
+                <li c="8" class="hidden"><a class="ajax-link" href="admin-signuprec" target="_blank"><i class="icon-item"></i><span class="hidden-tablet"> 指纹签到</span></a></li>
+                <li c="8" class="hidden"><a class="ajax-link" href="admin-signuprecs-query"><i class="icon-item"></i><span class="hidden-tablet"> 记录查询</span></a></li>
+
+                        </s:if>
+                  
+                 
+        </ul>
+    </div><!--/.well -->
+</div><!--/span-->
+<!-- left menu ends -->

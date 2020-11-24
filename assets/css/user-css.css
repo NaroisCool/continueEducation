@@ -1,0 +1,107 @@
+@CHARSET "UTF-8";
+
+
+.Header{ height:130px; background-color: #89cff1;}
+
+
+.contain, .contain img{width:1279px; height:130px;}
+.contain img{border:0;vertical-align:top;max-width: none;}
+
+.Nav{ height:37px; background:url(../images/Nav1.jpg) repeat-X; padding-left:20px;}
+.Nav a{ width:100px; height:37px; margin:0px 10px; display:block; float:left; color:#F0FCFE; font-size:16px; line-height:37px; text-align:center;text-decoration:none; font-family:"Microsoft YaHei";}
+.Nav a:hover{background:url(../images/Nav2.jpg) repeat-X;}
+.A_Select{background:url(../images/Nav2.jpg) repeat-X;}
+
+.well{
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.box-header{
+    height:24px;
+    padding: 4px;
+    padding-left: 16px;
+    /*background: url(../images/thbg2.jpg);*/
+}
+
+.breadcrumb{ 
+    /*padding-bottom: 2px;*/
+    margin-bottom: -5px;
+    background-image: url(../images/thbg2.jpg);
+}
+
+.table{
+    margin-bottom: 1px;
+}
+.pagination a,
+.setting3 .btn,
+.filter .btn,
+.toolBar .btn,
+.modal-footer .btn{
+    font-size: 12px;
+    color: #000000;
+    /*border-color:gray;*/
+    background: transparent repeat-x 0 0;
+    background-image: url(../images/grid3-hrow.gif);
+}
+
+.pagination{
+    margin: 0;
+}
+
+.table th{
+    text-align: center;
+}
+.table-bordered td:first-child {
+    text-align: center;
+}
+
+.table thead{
+    background-color:#f9f9f9;
+    background-image:url(../images/grid3-hrow.gif);
+}
+
+.pagination a{
+    line-height: 25px;
+    cursor: pointer;
+}
+.icon-cancel{
+    background-position:-1px -1px;
+    background-image:url(../images/cancel.gif);
+}
+
+.icon-submit{
+    background-position:0px 0px;
+    background-image:url(../images/submit.gif);
+}
+
+.container-fluid{
+    padding-left: 1px;
+}
+
+.box-header{
+    cursor: default;
+    background-image: url(../images/thbg2.jpg);
+}
+
+.thumbnail img, .thumbnail > a{
+    width: 120px;
+    height: 55px;
+}
+
+.thumbnail{
+    margin: 40px;
+}
+
+.Footer{ width:100%;}
+.Footer img{margin:15px 5px;}
+.Links{ width:100%; text-align:center; font-size:15px}
+.Links a{ margin:2px 10px;text-decoration:none;color:#313031; font-family:"Microsoft YaHei",΢���ź�;}
+.Links a:hover{text-decoration:underline;color:#ff9900;}
+.CopyRight{width:100%;text-align:center; margin:5px 0px 10px 0px; color:#515151; font-size:13px;}
+
+
+.modal-body select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input{
+    padding:2px;
+    margin-bottom: 0;
+}

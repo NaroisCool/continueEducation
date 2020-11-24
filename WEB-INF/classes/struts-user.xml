@@ -1,0 +1,103 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    
+    <package name="user" namespace="/" extends="json">         
+        <!-- 页面 -->     
+        <action name="user-*" class="cn.pei.cjw.action.UserAction" method="dispatcher"> 
+            <result type="dispatcher">/WEB-INF/jsp/user-{1}.jsp</result>    
+        </action>
+        
+        <action name="user-printiframe" class="cn.pei.cjw.action.UserAction" method="get"> 
+            <result type="dispatcher">/print/print.jsp</result>    
+        </action>
+        
+        <!-- action请求 -->
+        <action name="action-user-qrcode-study" class="cn.pei.cjw.action.UserStudyNewRecAction" method="pageQrCode">
+            <interceptor-ref name="defaultStack"></interceptor-ref>
+            <result type="json">
+                <param name="includeProperties">resultCode,page.*</param>
+            </result>
+        </action>
+        <action name="action-user-user-get" class="cn.pei.cjw.action.UserAction" method="getByUser">
+            <result type="json">
+                <param name="includeProperties">resultCode,obj.*</param>
+            </result>
+        </action>                      
+        <action name="action-user-user-edit" class="cn.pei.cjw.action.UserAction" method="editByUser"> 
+            <result type="json">
+                <param name="includeProperties">resultCode,obj.*</param>
+            </result>
+        </action>                         
+        <action name="action-user-user-editPassowrd" class="cn.pei.cjw.action.UserAction" method="editPassowrd"> 
+            <result type="json">
+                <param name="includeProperties">resultCode</param>
+            </result>
+        </action> 
+        
+        <action name="action-user-agency-all" class="cn.pei.cjw.action.AgencyAction" method="all"> 
+            <result type="json">
+                <param name="includeProperties">resultCode,list.*</param>
+            </result>
+        </action>          
+        <action name="action-user-agency-get" class="cn.pei.cjw.action.AgencyAction" method="get"> 
+            <result type="json">
+                <param name="includeProperties">resultCode,obj.*</param>
+            </result>
+        </action>        
+        
+        <action name="action-user-code-page" class="cn.pei.cjw.action.CodeAction" method="pageByUser"> 
+            <result type="json">
+                <param name="includeProperties">resultCode,page.*</param>
+            </result>
+        </action>       
+        <action name="action-user-code-getByCode" class="cn.pei.cjw.action.CodeAction" method="getByCodeByUser"> 
+            <result type="json">
+                <param name="includeProperties">resultCode,obj.*</param>
+            </result>
+        </action>      
+        <action name="action-user-code-get" class="cn.pei.cjw.action.CodeAction" method="getByUser"> 
+            <result type="json">
+                <param name="includeProperties">resultCode,obj.*</param>
+            </result>
+        </action>    
+        
+        <action name="action-user-study-all" class="cn.pei.cjw.action.StudyAction" method="all"> 
+            <result type="json">
+                <param name="includeProperties">resultCode,list.*</param>
+            </result>
+        </action>    
+        <action name="action-user-studyrec-refresh" class="cn.pei.cjw.action.StudyRecAction" method="study"> 
+            <result type="json">
+                <param name="includeProperties">resultCode,codeInfo.*</param>
+            </result>
+        </action>
+        <action name="action-user-studynewrec-refresh" class="cn.pei.cjw.action.StudyRecNewAction" method="study">
+            <result type="json">
+                <param name="includeProperties">resultCode</param>
+            </result>
+        </action>
+        <action name="action-user-studys-all" class="cn.pei.cjw.action.UserStudyNewRecAction" method="page">
+            <result type="json">
+                <param name="includeProperties">resultCode,page.*</param>
+            </result>
+        </action>
+        <action name="action-user-reserve-order" class="cn.pei.cjw.action.ReserveAction" method="order"> 
+            <result type="json">
+                <param name="includeProperties">resultCode</param>
+            </result>
+        </action>    
+        <action name="action-user-reserve-all" class="cn.pei.cjw.action.ReserveAction" method="allByDateNotFull"> 
+            <result type="json">
+                <param name="includeProperties">resultCode,list.*</param>
+            </result>
+        </action>
+        <action name="action-user-face-validate" class="cn.pei.cjw.action.FaceAction" method="validate">
+            <result type="json">
+                <param name="includeProperties">resultCode,obj.*</param>
+            </result>
+        </action>
+    </package>    
+</struts>

@@ -1,0 +1,20 @@
+<%@ page pageEncoding="UTF-8" %>
+<%@ taglib uri="/struts-tags" prefix="s" %>
+<s:set name="type" value="login.loginType" /> 
+<div>
+    <ul class="breadcrumb">
+        <li>
+            当前位置：
+            <s:if test="#type != 'user'">  
+                管理中心               
+            </s:if>  
+            <s:else>
+                <a href="user-study">在线培训</a>
+            </s:else>
+            <span class="divider">-></span>
+        </li>
+        <li>
+            ${title}
+        </li>
+    </ul>
+</div>

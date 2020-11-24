@@ -1,0 +1,79 @@
+<%@ page pageEncoding="UTF-8" %>
+<%@ taglib uri="/struts-tags" prefix="s" %>
+<s:set name="type" value="login.loginType" /> 
+<s:if test="#type != 'user'"> 
+    <!-- topbar starts -->
+    <div class="navbar">
+        <div id="north">
+            <div class="logo">
+                <img src="assets/images/logo.png">
+            </div>
+            <div class="top_rt">
+                <p>
+                    <img src="assets/images/welcome.gif">
+                    欢迎您,${login.loginTypeName}! 账户：${login.loginName},
+                </p>
+                <ul>
+                    <li>
+                        <img src="assets/images/download1.gif">
+                        <a href="javascript:void(0);" onclick="winBox('kjxz.html', '控件及驱动下载', 540, 300);">控件下载</a>
+                    </li>
+                    <li>
+                        <img src="assets/images/point.gif">
+                        <a href="admin-pdf-view?other=jxdg-%E6%95%99%E5%AD%A6%E5%A4%A7%E7%BA%B2">教学大纲</a>
+                    </li>
+                    <li>
+                        <img src="assets/images/help.gif">
+                        <a href="javascript:void(0);" onclick="winBox('help.html', '帮助说明', 540, 300);">帮助说明</a>
+                    </li>
+                    <li>
+                        <img src="assets/images/contact.gif">
+                        <a href="javascript:void(0);" onclick="winBox('lxfs.html', '联系方式', 540, 300);">联系方式</a>
+                    </li>
+                    <li>
+                        <img src="assets/images/password.gif">
+                        <a href="javascript:void(0);" password="edit" >修改密码</a>
+                    </li>
+                    <li>
+                        <img src="assets/images/logout.gif">
+                        <a href="logout">退出系统</a>
+                    </li>
+                    <li>
+                        <img src="assets/images/close.gif">
+                        <a href="javascript:void(0);" onclick="window.close();">关闭网页</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- topbar ends -->
+    <a id="backtotop" class="">Top</a>
+</s:if>
+<s:else>    
+    <div class="navbar">
+        <div class="Header">
+            <div class="contain" id="idContainer">
+                <table id="idSlider" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td><a><img src="assets/images/head1.png"/></a></td>
+                        <td><a><img src="assets/images/head2.png"/></a></td>
+                        <td><a><img src="assets/images/head3.png"/></a></td>
+                    </tr>
+                </table>
+            </div>
+            <script>
+                            new SlideTrans("idContainer", "idSlider", 3, {Vertical: false}).Run();
+            </script>
+        </div>
+        <div class="Nav">
+            <a href="user-study">首页</a> 
+            <a href="user-pdf-view?other=flfg-%E6%94%BF%E7%AD%96%E6%B3%95%E8%A7%84">政策法规</a> 
+            <a href="user-notice">培训指南</a>
+            <a href="user-pdf-view?other=pxdg-%E6%95%99%E5%AD%A6%E5%A4%A7%E7%BA%B2">教学大纲</a> 
+            <a href="javascript:void(0);" onclick="winBox('zxzx.html', '在线咨询', 600, 600);">在线咨询</a>
+            <a href="javascript:void(0);" onclick="winBox('lxwm.html', '联系我们', 900, 720);">联系我们</a>
+            <a href="javascript:void(0);" password="edit">修改密码</a>
+            <a href="logout">退出登录</a>
+        </div>
+    </div>
+</s:else>

@@ -1,0 +1,55 @@
+<%@ page pageEncoding="UTF-8" %>
+<%@ taglib uri="/struts-tags" prefix="s" %>
+<s:set name="type" value="login.loginType" /> 
+<meta charset="utf-8">
+<!--<link id="bs-css" href="assets/css/bootstrap-spacelab.css" rel="stylesheet">-->
+<link href="assets/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+<link href="assets/css/jquery-ui-1.8.21.custom.css" rel="stylesheet">
+<link href='assets/css/fullcalendar.css' rel='stylesheet'>
+<link href='assets/css/fullcalendar.print.css' rel='stylesheet'  media='print'>
+<link href='assets/css/chosen.css' rel='stylesheet'>
+<link href='assets/css/uniform.default.css' rel='stylesheet'>
+<link href='assets/css/colorbox.css' rel='stylesheet'>
+<link href='assets/css/jquery.cleditor.css' rel='stylesheet'>
+<link href='assets/css/jquery.noty.css' rel='stylesheet'>
+<link href='assets/css/noty_theme_default.css' rel='stylesheet'>
+<link href='assets/css/elfinder.min.css' rel='stylesheet'>
+<link href='assets/css/elfinder.theme.css' rel='stylesheet'>
+<link href='assets/css/jquery.iphone.toggle.css' rel='stylesheet'>
+<link href='assets/css/uploadify.css' rel='stylesheet'>
+
+<link href="assets/plugin/css/css.bootstrap.editbox.css" rel="stylesheet">
+<link href="assets/plugin/css/css.bootstrap.table.css" rel="stylesheet">
+<s:if test="#type != 'user'"> 
+    <link href="assets/css/bootstrap-cerulean1.css" rel="stylesheet">
+    <link href='assets/css/admin-opa-icons.css' rel='stylesheet'>
+    <link href="assets/css/admin-charisma-app.css" rel="stylesheet">
+    <link href="assets/css/admin-css.css" rel="stylesheet">
+</s:if>
+<s:else>
+    <link href="assets/css/bootstrap-cerulean.css" rel="stylesheet">  
+    <link href="assets/css/user-charisma-app.css" rel="stylesheet">
+    <link href='assets/css/user-opa-icons.css' rel='stylesheet'>
+    <link href="assets/css/user-css.css" rel="stylesheet">  
+    <script src="assets/js/SlideTrans.js"></script>
+</s:else>
+
+<!-- jQuery -->
+<script src="assets/js/jquery-1.7.2.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<!-- jQuery UI -->
+<script src="assets/js/jquery-ui-1.8.21.custom.min.js"></script>
+<!-- library for cookie management -->
+<script src="assets/js/jquery.cookie.js"></script>
+<s:set name="agencyList" value="allAgency" />
+
+<script>
+    agencys = {};
+    <s:iterator id="agency" value="#agencyList"> 
+    agencys[${agency.id}] = '${agency.name}';
+    </s:iterator> 
+
+    function winBox(link, name, w, h) {
+        window.open(link, name, 'top=' + (window.screen.height - h) / 2 + ',left=' + (window.screen.width - w) / 2 + ', width = ' + w + ', height = ' + h);
+    }
+</script>

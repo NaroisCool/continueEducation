@@ -1,0 +1,345 @@
+/****************** common ****************/
+body{overflow-y:scroll}
+.middle{ margin: 0 auto; }
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+li{
+	list-style: none;
+}
+ul,dl,dt,dd{
+	margin:0;
+	padding:0;
+}
+*{
+	font-family: 'MicroSoft Yahei';
+}
+.hide{
+	visibility: hidden !important;
+	display: none !important;
+}
+.show{
+	visibility: visible !important;
+	display: block !important;
+}
+.container{
+	width: 960px;
+	margin: 0 auto;
+}
+.icon24{
+	display: block;
+	float: left;
+	width: 25px;
+	height: 25px;
+	background: url(../_imgs/icon.png) 0 0 no-repeat;
+}
+.icon_important{
+	background-position: 0 0;
+}
+a.btn_color_240, a.btn_gary_240{
+	width: 240px;
+	height: 41px;
+	font-size:14px;
+	line-height: 40px;
+	text-align: center;
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	background: url(../_imgs/btn_color.png) 0 0 no-repeat;
+}
+a.btn_color_240:hover{
+	background: url(../_imgs/btn_color.png) 0 -41px no-repeat;
+}
+a.btn_color_240:active{
+	background: url(../_imgs/btn_color.png) 0 -82px no-repeat;
+}
+a.btn_gary_240{
+	height: 32px;
+	line-height: 32px;
+	color: #dd4014;
+	background: url(../_imgs/btn_color.png) 0 -126px no-repeat;
+}
+a.btn_gary_240:hover{
+	background: url(../_imgs/btn_color.png) 0 -159px no-repeat;
+}
+a.btn_gary_240:active{
+	background: url(../_imgs/btn_color.png) 0 -192px no-repeat;
+}
+.ellipsis{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.loading{
+	height: 32px;
+	line-height: 32px;
+	font-size: 24px;
+	padding-left: 40px;
+	color: #4d4d4d;
+	width: 230px;
+	margin: 100px auto 0px;
+	background: url(../_imgs/loading_32.gif) no-repeat;
+}
+.cameras .loading{
+	height: 32px;
+	line-height: 32px;
+	font-size: 24px;
+	padding-left: 40px;
+	color: #4d4d4d;
+	width: 230px;
+	margin: 100px auto 0px;
+	background: url(../_imgs/loading_32.gif) no-repeat;
+}
+.cameras .nothing{
+	font-size: 30px;
+	line-height: 30px;
+	color: #bcbcbc;
+	text-align: center;
+}
+.camera .pic_error{
+	background:url( ../images/home_error_big.png ) no-repeat center center;
+}
+.smallModel{
+	width: 360px;
+	left: 50%;
+	margin-left: -180px;
+}
+.middleModel{
+	width: 560px;
+	left: 50%;
+	margin-left: -280px;
+}
+.modal{
+	color: #6d6e71
+}
+.modal .modal-header{
+	height: 19px;
+	padding: 5px 10px;
+	background: #f4f4f4;
+}
+.modal .modal-header h3{
+	height: 19px;
+	line-height: 18px;
+	font-size: 14px;
+	color: #6d6e71;
+	font-weight: normal;
+}
+.modal .modal-footer{
+	background: #fff;
+	border: 10px;
+	border: none;
+	padding: 10px 15px;
+}
+.modal .btn{
+	padding: 3px 15px 3px 20px;
+	letter-spacing: 5px;
+	color: #6d6e71;
+}
+/* hint组件样式 */
+.hint{
+	
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	z-index: 1060;
+	max-width: 252px;
+	margin: -60px 0 0 -90px;
+	overflow: auto;
+	background-color: #fff; 
+	text-align: center;
+	display: none;
+	border:none;
+	background-color:rgba(153,153,153,0.3); 
+	background:#999\9; 
+	line-height:200%;
+	padding:6px;
+	-moz-border-radius: 8px;     
+    -webkit-border-radius: 8px;   
+    border-radius:8px;     
+    word-wrap : break-word;      
+
+}
+
+.hint *{ position:relative;}
+
+.hint .hint_container{
+	
+	background:#fff; 
+	-moz-border-radius: 6px;     
+    -webkit-border-radius: 6px;   
+    border-radius:6px;  
+    padding:20px;
+	
+}
+
+.hint .hint_container p{
+	margin:0;
+}
+
+.hint_type{
+	color: #353535;
+	position: relative;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 20px;
+	text-align: left;
+	padding:6px 0 6px 39px;
+}
+.ie .hint_type{
+	padding-left:42px;
+}
+
+.hint_right{
+	background: url(../imgs/hint.png) 0px -175px no-repeat;
+}
+
+.hint_wrong{
+	background: url(../imgs/hint.png) 0px -89px no-repeat;
+}
+
+.hint_warn{
+	background: url(../imgs/hint.png) 0px 0px no-repeat;
+}
+/****************** header ****************/
+.header{
+	width: 960px;
+}
+.logo{
+	display: block;
+	height: 60px;
+	width: 315px;
+	background: url(../_imgs/logo.png) 0 20px no-repeat;
+}
+.miniNav{
+	color: #888888;
+}
+.miniNav li{
+	float: left;
+	line-height: 40px;
+}
+.miniNav li a{
+	color: #888888;
+	font-size: 12px;
+	padding: 15px;
+}
+
+/*===== for miniHeader ==== */
+.miniHeader{
+	height: 60px;
+}
+
+/*********** footer ************/
+.footer{
+	margin: 60px 0 0 0;
+	clear: both;
+	text-align: center;
+	height: 34px;
+	line-height: 34px;
+	border-top: 1px solid #eeeeee;
+	border-bottom: 1px solid #eeeeee;
+}
+.footer .flogo a {
+	font-size: 12px;
+}
+
+/*升级控件等待窗口*/
+
+.updateLoadingPanel{
+	width:360px;
+	height:130px;
+	left:50%;
+	margin-left:-180px;
+}
+.updateLoadingPanel .progress{
+	width:320px;
+}
+.upadteResaultPanel{
+	width:360px;
+	left:50%;
+	margin-left:-180px;
+}
+.upadteResaultPanel .detail-list{
+	border:1px solid #999;
+	max-height:300px;
+	overflow: auto;
+	border-radius: 3px;
+}
+.upadteResaultPanel .detail-list li {
+	border-bottom:1px solid #ccc;
+	padding:10px 10px;
+	color:#333;
+}
+.upadteResaultPanel .detail-list li:last-child {
+	border-bottom:none;
+
+}
+
+
+.progress {
+	margin-bottom: 0px;
+	margin-top: 10px;
+	width: 320px;
+	height: 9px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	background-color: #fff;
+	-webkit-box-shadow: inset -1px 1px 1px rgba(0, 0, 0, .13);
+	-moz-box-shadow: inset -1px 1px 1px rgba(0, 0, 0, .13);
+	box-shadow: inset -1px 1px 1px rgba(0, 0, 0, .13);
+	background-image: -webkit-linear-gradient(bottom, #e2e2e2, #cacaca);
+	background-image: -moz-linear-gradient(bottom, #e2e2e2, #cacaca);
+	background-image: -o-linear-gradient(bottom, #e2e2e2, #cacaca);
+	background-image: -ms-linear-gradient(bottom, #e2e2e2, #cacaca);
+	background-image: linear-gradient(to top, #e2e2e2, #cacaca);
+}
+
+.progress .bar {
+	width: 0%;
+	height: 9px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	background-color: #fff;
+	-webkit-box-shadow: -1px 1px 1px #fff;
+	-moz-box-shadow: -1px 1px 1px #fff;
+	box-shadow: -1px 1px 1px #fff;
+	background-image: -webkit-linear-gradient(bottom, #da491c, #eb7e5d 78%);
+	background-image: -moz-linear-gradient(bottom, #da491c, #eb7e5d 78%);
+	background-image: -o-linear-gradient(bottom, #da491c, #eb7e5d 78%);
+	background-image: -ms-linear-gradient(bottom, #da491c, #eb7e5d 78%);
+	background-image: linear-gradient(to top, #da491c, #eb7e5d 78%);
+}
+
+.upadteSuccess{
+	width:360px;
+	left:50%;
+	margin-left:-180px;
+}
+/*一键升级黄色TIP*/
+.flashTip{
+	background: #F6F2AA;
+	font-size:14px;
+	color:#333;
+}
+.flashTip p{
+	padding:10px;
+	line-height:40px;
+	display:inline;
+}
+.flashTip button{
+	float:right;
+	margin:5px;
+	border:1px solid #E0DEBC;
+	width:110px;
+	height:30px;
+	border-radius: 5px;
+	background:-webkit-gradient(linear,0 0,0 100%,from(#ffffff),to(#F8F8F8));
+	cursor:pointer;
+}
+.flashTip .btn_update_device img{
+	margin-right: 5px;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>    
+    <package name="login" namespace="/" extends="json">        
+        <!-- 页面 -->
+        <action name="index" class="cn.pei.cjw.action.LoginAction">
+            <interceptor-ref name="defaultStack"></interceptor-ref>  
+            <result type="redirect">${indexUrl}</result>    
+        </action> 
+        <action name="" class="cn.pei.cjw.action.LoginAction" method="dispatcher">
+            <interceptor-ref name="defaultStack"></interceptor-ref>  
+            <result type="redirect">index</result>    
+        </action> 
+        <action name="user-login" class="cn.pei.cjw.action.LoginAction" method="dispatcher"> 
+            <interceptor-ref name="defaultStack"></interceptor-ref>  
+            <result type="dispatcher">/WEB-INF/jsp/user-login.jsp</result>    
+        </action>  
+        <action name="admin-login" class="cn.pei.cjw.action.LoginAction" method="dispatcher"> 
+            <interceptor-ref name="defaultStack"></interceptor-ref>  
+            <result type="dispatcher">/WEB-INF/jsp/admin-login.jsp</result>    
+        </action>   
+        <action name="user-nav" class="cn.pei.cjw.action.LoginAction" method="dispatcher"> 
+            <interceptor-ref name="defaultStack"></interceptor-ref>  
+            <result type="dispatcher">/WEB-INF/jsp/user-nav.jsp</result>    
+        </action>      
+        
+        <!-- 登录 -->
+        <action name="dologin-*" class="cn.pei.cjw.action.LoginAction" method="{1}DoLogin"> 
+            <interceptor-ref name="defaultStack"></interceptor-ref>  
+            <result type="json">
+                <param name="includeProperties">resultCode,retUrl</param>
+            </result>
+        </action>    
+        
+        <action name="logout" class="cn.pei.cjw.action.LoginAction" method="logout">
+            <interceptor-ref name="defaultStack"></interceptor-ref>
+            <result type="redirect">index</result>    
+        </action>     
+    </package>    
+</struts>

@@ -1,0 +1,36 @@
+/* 
+    Document   : css.bootstrap.table
+    Created on : 2013-7-11, 10:56:37
+    Author     : shaopei
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+.btn-operate{
+    width: 20px;
+    height: 20px;
+    padding: 0px;
+}
+.btn-operate > i{
+    margin: 0px;
+}
+/*.table{
+    margin: 15px 6px 6px 6px;
+}*/
+/*.toolBar{    
+    margin: 6px 6px 0 6px;
+    border-bottom: 1px dashed #e3e3e3;
+    padding: 0 0 6px 0;
+}*/
+.table-title{
+    color: gray;
+    margin: 10px 6px 0 6px;
+    border-bottom: 1px dotted #e3e3e3;
+    padding: 0 0 6px 10px;
+}
+.table-hide{
+    display: none;
+}
+.pagination{
+    margin-right: 8px;
+}

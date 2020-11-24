@@ -1,0 +1,406 @@
+@CHARSET "UTF-8";
+
+body {
+    font-family: 'Microsoft Yahei', 微软雅黑, Arial, STHeiti;
+    -webkit-user-select: none;
+}
+
+input:focus {
+    -webkit-box-shadow: 0 0 4px rgba(254, 151, 95, .75), inset 1px 1px 4px
+        rgba(0, 0, 0, .09) !important;
+    -moz-box-shadow: 0 0 4px rgba(254, 151, 95, .75), inset 1px 1px 4px
+        rgba(0, 0, 0, .09) !important;
+    box-shadow: 0 0 4px rgba(254, 151, 95, .75), inset 1px 1px 4px
+        rgba(0, 0, 0, .09) !important;
+    border: solid 1px #f2b6a9 !important;
+}
+
+li {
+    display: inline-block;
+} 
+
+.login-overlay {
+    width: 276px;
+    height: 430px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+}
+
+/* parallax */
+#parallax {
+    width: 100%;
+    height: 540px;
+    position: relative;
+    overflow: hidden;
+    background: url("../images/parallax_bg.png") repeat-x;
+    background-image: -webkit-linear-gradient(bottom, #fff 3%, #d8d8d8 39%, #d4d4d4 100%);
+    background-image: -moz-linear-gradient(bottom, #fff 3%, #d8d8d8 39%, #d4d4d4 100%);
+    background-image: -o-linear-gradient(bottom, #fff 3%, #d8d8d8 39%, #d4d4d4 100%);
+    background-image: -ms-linear-gradient(bottom, #fff 3%, #d8d8d8 39%, #d4d4d4 100%);
+    background-image: linear-gradient(to top, #fff 3%, #d8d8d8 39%, #d4d4d4 100%);
+}
+
+#parallax .main {
+    width: 960px;
+    height: 540px;
+    margin: auto;
+    position: relative;
+    display: block;
+}
+/* 表单 */
+#parallax_form {
+    width: 226px;
+    height: 380px;
+    background: url("../images/parallax_form_bg.png") no-repeat;
+    position: absolute;
+    left: 650px;
+    top: 120px;
+    padding: 25px;
+    z-index: 9999;
+}
+
+#parallax_form .description_a {
+    font-size: 18px;
+    color: #3B3B3B;
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+#parallax_form .username-tip {
+    margin-bottom: 14px !important;
+    color: gray;
+}
+
+#parallax_form .username {
+    margin-bottom: 14px;
+    color: gray;
+    width: 160px;
+}
+
+#parallax_form .sp {
+    margin-top:5px;
+    float:left;
+}
+
+#parallax_form .password {
+    width: 160px;
+}
+
+.login_mall #parallax_form .code {
+    white-space: nowrap
+}
+
+#parallax_form .code .code_label {
+    width: 52px;
+    float: left;
+    padding-top: 5px;
+}
+
+#parallax_form .code .code_input {
+    width: 60px;
+    height: 25px;
+    padding: 0;
+    margin: 0;
+}
+
+#parallax_form .code .code_img {
+    color: #353535;
+    font-size: 12px;
+}
+
+#parallax_form .code .code_a {
+    color: #353535;
+}
+
+#parallax_form .msic {
+    margin-top: 10px;
+}
+
+#parallax_form .msic .auto_login {
+    width: 20px;
+    float: left;
+}
+
+#parallax_form .msic .auto_label {
+    width: 60px;
+    float: left;
+    margin-left: 5px;
+}
+
+#parallax_form .msic .forget_pass {
+    margin-left: 70px;
+    color: #5283D4 !important;
+}
+
+#parallax_form .login {
+    width: 225px;
+    height: 41px;
+    background: url("../images/login_btn_normal.png") no-repeat;
+    display: block;
+    text-align: center;
+    line-height: 41px;
+    color: white;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+#parallax_form .login:hover {
+    background: url("../images/login_btn_hover.png") no-repeat;
+    text-decoration: none;
+}
+
+#parallax_form .login:active {
+    background: url("../images/login_btn_active.png") no-repeat;
+}
+
+#parallax_form .line {
+    position: absolute;
+    bottom: 145px;
+    width: 220px;
+    border: 1px dashed #D5D5D5;
+}
+
+.login_mall #parallax_form .line {
+    bottom: 100px;
+}
+
+#parallax_form .description_b {
+    position: absolute;
+    bottom: 105px;
+    color: #595959;
+}
+
+.login_mall #parallax_form .description_b {
+    bottom: 60px;
+}
+
+#parallax_form .register {
+    width: 222px;
+    height: 29px;
+    position: absolute;
+    font-size: 14px;
+    text-align: center;
+    line-height: 29px;
+    color: #B00;
+    display: block;
+    background: url("../images/register_btn_normal.png") no-repeat;
+    bottom: 75px;
+}
+
+.login_mall #parallax_form .register {
+    bottom: 30px;
+}
+
+#parallax_form .register:hover {
+    text-decoration: none;
+    background: url("../images/register_btn_hover.png") no-repeat;
+}
+#parallax_form .register:active {
+    background: url("../images/register_btn_active.png") no-repeat;
+}
+#parallax_form .demo_video {
+    width: 222px;
+    height: 32px;
+    background: url("../images/demo_video.png") no-repeat;
+    display: block;
+    text-align: center;
+    line-height: 32px;
+    color: #d71920;
+    font-size: 14px;
+    position: absolute;
+    bottom: 30px;
+}
+#parallax_form .demo_video:hover {
+    text-decoration: none;
+
+}
+
+#parallax_form .qq {
+    width: 222px;
+    height: 29px;
+    position: absolute;
+    font-size: 14px;
+    text-align: center;
+    line-height: 29px;
+    color: #B00;
+    display: block;
+    background: url("../images/register_btn_normal.png") no-repeat;
+    bottom: 105px;
+}
+
+#parallax_form .qq:hover {
+    text-decoration: none;
+    background: url("../images/register_btn_hover.png") no-repeat;
+}
+
+#parallax_form .qq:active {
+    background: url("../images/register_btn_active.png") no-repeat;
+}
+
+#parallax_form .sina {
+    width: 222px;
+    height: 29px;
+    position: absolute;
+    font-size: 14px;
+    text-align: center;
+    line-height: 29px;
+    color: #B00;
+    display: block;
+    background: url("../images/register_btn_normal.png") no-repeat;
+    bottom: 70px;
+}
+
+#parallax_form .sina:hover {
+    text-decoration: none;
+    background: url("../images/register_btn_hover.png") no-repeat;
+}
+
+#parallax_form .sina:active {
+    background: url("../images/register_btn_active.png") no-repeat;
+}
+
+#parallax_form .tip {
+    width: 207px;
+    height: 30px;
+    background-color: #FEE;
+    border: solid 1px #FAC8C8;
+    position: absolute;
+    top: 16px;
+    color: #FF7474;
+    font-size: 14px;
+    line-height: 30px;
+    padding-left: 10px;
+    display: none;
+}
+/* parallax main */
+#parallax_cloud_b {
+    width: 1920px;
+    height: 701px;
+    background: url("../images/parallax_cloud_b.png") center;
+    position: absolute;
+    top: 200px;
+    z-index: 1;
+}
+
+#parallax_cloud_r {
+    width: 830px;
+    height: 438px;
+    background: url("../images/parallax_cloud_r.png") center;
+    position: absolute;
+    right: -430px;
+    top: 140px;
+    z-index: 9;
+}
+
+#parallax_cloud_m_back {
+    width: 846px;
+    height: 455px;
+    background: url("../images/parallax_cloud_m_back.png") center;
+    top: 100px;
+    position: absolute;
+    left: -40px;
+    z-index: 2;
+}
+
+#parallax_cloud_l {
+    width: 850px;
+    height: 452px;
+    background: url("../images/parallax_cloud_l.png") center;
+    position: absolute;
+    left: -230px;
+    z-index: 3;
+    top: 50px;
+}
+
+#parallax_cameras {
+    width: 324px;
+    height: 200px;
+    background: url("../images/parallax_cameras.png") center;
+    position: absolute;
+    z-index: 4;
+    left: 120px;
+    top: 134px;
+}
+
+#parallax_cloud_m_front {
+    width: 704px;
+    height: 319px;
+    background: url("../images/parallax_cloud_m_front.png") no-repeat 60px
+        -5px;
+    position: absolute;
+    z-index: 5;
+    left: -30px;
+    top: 225px;
+}
+
+#parallax_cloud_circle {
+    width: 704px;
+    height: 319px;
+    background: url("../images/parallax_cloud_circle.png") center;
+    position: absolute;
+    z-index: 5;
+    left: -60px;
+    top: 120px;
+}
+
+#parallax_1 {
+    width: 75px;
+    height: 67px;
+    background: url("../images/parallax_1.gif") center;
+    position: absolute;
+    z-index: 6;
+    top: 220px;
+}
+
+#parallax_2 {
+    width: 75px;
+    height: 67px;
+    background: url("../images/parallax_2.gif") center;
+    position: absolute;
+    z-index: 6;
+    top: 281px;
+    left: 106px;
+}
+
+#parallax_3 {
+    width: 75px;
+    height: 67px;
+    background: url("../images/parallax_3.gif") center;
+    position: absolute;
+    z-index: 6;
+    top: 296px;
+    left: 276px;
+}
+
+#parallax_4 {
+    width: 75px;
+    height: 67px;
+    background: url("../images/parallax_4.gif") center;
+    position: absolute;
+    z-index: 6;
+    top: 280px;
+    left: 420px;
+}
+
+/* Animate */
+body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
+    -webkit-backface-visibility: hidden;
+}
+
+.animated {
+    -webkit-animation-duration: 0.4s;
+    -moz-animation-duration: 0.4s;
+    -o-animation-duration: 0.4s;
+    animation-duration: 0.4s;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+a.ologin:hover{color: #999999;}   
+a.ologin:link{color:#999999;}  
+a.ologin:visited {color:#999999;}  
+a.ologin:active{color:#999999;} 

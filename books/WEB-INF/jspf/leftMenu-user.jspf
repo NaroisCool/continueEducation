@@ -1,0 +1,39 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri="/struts-tags" prefix="s" %>
+<s:set name="user" value="login" /> 
+<s:set name="act" value="action" /> 
+<!-- left menu starts -->
+<div class="span2 main-menu-span">
+    <div class="well nav-collapse sidebar-nav">
+        <ul class="nav nav-tabs nav-stacked main-menu">
+
+            <!--<li class="nav-header hidden-tablet"><span class="hidden-tablet"> 菜单</span></li>-->
+            <li><a class="ajax-link" href="user-users"><i class="icon-user"></i><span class="hidden-tablet"> 学员信息</span></a></li>
+                        <s:if test="#act == 'user-study'">                
+                <li id="orderLive" <s:if test="#user.isCompleted"></s:if><s:else>style="display:none"</s:else>><a class="ajax-link" href="user-reserve"><i class="icon-hand-right"></i><span class="hidden-tablet"> 预约授课</span></a></li>
+                        </s:if>
+                        <%--<li><a class="ajax-link" href="user-pic"><i class="icon-picture"></i><span class="hidden-tablet"> 照片设置</span></a></li>--%>
+            <li><a class="ajax-link" href="user-code"><i class="icon-barcode"></i><span class="hidden-tablet"> 培训记录</span></a></li>
+            <li class="nav-header hidden-tablet"><span class="hidden-tablet"> 视频培训资料</span></li>
+                <s:if test="#act == 'user-study'">
+                    <s:set name="studyList" value="allVideoStudy" /> 
+                    <s:iterator id="study" value="#studyList"> 
+                    <li><a class="ajax-link" href="javascript:void(0);" typ="${study.contentsType}" study="${study.id}" studySrc="${study.contents}">
+                            <i class="icon-tag"></i><span class="hidden-tablet" style="font-size: 11px;"> ${study.name}</span></a>
+                    </li>
+                </s:iterator> 
+                <li class="nav-header hidden-tablet"><span class="hidden-tablet"> 文档培训资料</span></li>
+                    <s:set name="studyList" value="allDocStudy" /> 
+                    <s:iterator id="study" value="#studyList"> 
+                    <li><a class="ajax-link" href="javascript:void(0);" typ="${study.contentsType}" study="${study.id}" studySrc="${study.contents}">
+                            <i class="icon-tag"></i><span class="hidden-tablet" style="font-size: 11px;"> ${study.name}</span></a>
+                    </li>
+                </s:iterator> 
+            </s:if>
+            <s:else>
+                <li><a class="ajax-link" href="user-study"><i class="icon-th-list"></i><span class="hidden-tablet"> 在线培训</span></a></li> 
+                        </s:else>
+        </ul>
+    </div><!--/.well -->
+</div><!--/span-->
+<!-- left menu ends -->
